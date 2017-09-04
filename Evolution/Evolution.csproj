@@ -4,16 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{852BB353-239B-425A-BDE0-2603D98273EE}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>ConsoleEvolution</RootNamespace>
-    <AssemblyName>ConsoleEvolution</AssemblyName>
+    <ProjectGuid>{906CEDD8-FDCF-4A5B-914C-C6B25911A1D6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Evolution</RootNamespace>
+    <AssemblyName>Evolution</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +24,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -39,19 +38,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CharGene.cs" />
-    <Compile Include="CharGenome.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="DNA\DNA.cs" />
+    <Compile Include="DNA\Gene.cs" />
+    <Compile Include="DNA\Genome.cs" />
+    <Compile Include="FloatExtension.cs" />
+    <Compile Include="Neuron.cs" />
+    <Compile Include="Population.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Evolution\Evolution.csproj">
-      <Project>{906cedd8-fdcf-4a5b-914c-c6b25911a1d6}</Project>
-      <Name>Evolution</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
